@@ -304,11 +304,6 @@ if submitted:
     st.markdown(f"### {risk_color} {prediction_label}")
     st.progress(min(max(proba, 0.0), 1.0), text=f"Estimated probability: {proba:.0%}")
 
-    if is_anomaly:
-        st.warning(
-            "⚠️ This combination of values is unusual compared to the data the model "
-            "was trained on — treat this prediction with extra caution."
-        )
 
     if top_factors:
         st.subheader("Top Contributing Factors")
